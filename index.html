@@ -24,7 +24,12 @@
 <!-- 内容 -->
 <div class="mdui-container mdui-typo">
   <h1>跳转中，请稍后！</h1>
-  <p>说明：为了支持我们的发展，我们暂时将主页跳转到2345网址导航，谢谢大家的支持！
+  <p>说明：为了支持我们的发展，我们暂时将主页跳转到2345网址导航，谢谢大家的支持！</p>
+    <div id='jump'>
+	  <p>将在<span id='box'></span>秒后自动跳转到新页面</p>
+	  <button class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent" onclick="window.location.href='https://www.2345.com/?k2744460679'">确定</button>
+	  <button class="mdui-btn mdui-btn-raised mdui-ripple" onclick="clearInterval(t2);document.getElementById('jump').style.display='none'">取消</button>
+    </div>
   <h1>关于我们</h1>
   <p><b>潇然工作室</b>成立于2017年，是一个提供家庭网络规划、网络设备维护、电脑组装维修、系统定制、等多项<b>网络业务</b>及视频剪辑制作、PPT设计等多项<b>媒体业务</b>的个人工作室。</p>
 </div>
@@ -33,7 +38,7 @@
 
 <!-- 尾部 -->
 <footer>
-  <div class="mdui-container-fluid mdui-color-theme mdui-shadow-4 mdui-text-center">
+  <div class="mdui-container-fluid mdui-text-center">
   <br></br>
   <p>建议使用 <a href=https://www.google.cn/intl/zh-CN/chrome/>Google Chrome</a> 等支持 Html 5 的现代浏览器访问本站！</p>
   <p>Copyright @ 2020 Xiaoran Studio. All Rights Reserved.</p>
@@ -44,11 +49,20 @@
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mdui/0.4.3/js/mdui.min.js"></script>
-<script language="javascript" type="text/javascript">
-// 以下方式直接跳转
-//window.location.href='https://www.2345.com/?k2744460679';
-// 以下方式定时跳转
-setTimeout("javascript:location.href='https://www.2345.com/?k2744460679'", 5000);
+
+<script type="text/javascript">
+	var count = 5;
+	function t1() {
+		if (count) {
+            document.getElementById('box').innerHTML=count;
+			--count;
+		} else {
+			clearInterval(t2);
+			window.location.href='https://www.2345.com/?k2744460679';
+		}
+	}
+	var t2 = setInterval(t1,1000);
+
 </script>
 </body>
 </html>
