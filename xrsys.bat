@@ -1,15 +1,15 @@
-echo ÏÂÔØaria2c
+echo ä¸‹è½½aria2c
 if not exist "%dir%\aria2c.exe" bitsadmin /transfer aria http://ys-d.ys168.com/609605353/VFg9jhs443J257653OU7/aria2c.123 %dir%\aria2c.exe
 pause
-echo ÏÂÔØ7za
+echo ä¸‹è½½7za
 aria2c.exe "http://rrd.me/gDnJg"
 pause
-echo ÏÂÔØIQI
+echo ä¸‹è½½IQI
 aria2c.exe "http://rrd.me/gDnKz" -x 16
 pause
-7za.exe x IQI9_v9.1008_x64_x86_ÒÑÔ¤ÖÃÆô¶¯.zip
+7za.exe x IQI9_v9.1008_x64_x86_å·²é¢„ç½®å¯åŠ¨.zip
 pause
-cd IQI9_v9.1008_x64_x86_ÒÑÔ¤ÖÃÆô¶¯
-Ê¹ÓÃIQIËÑË÷Ó³Ïñ.cmd
+cd IQI9_v9.1008_x64_x86_å·²é¢„ç½®å¯åŠ¨
+ä½¿ç”¨IQIæœç´¢æ˜ åƒ.cmd
 pause
 rmdir /S /Q %dir%
