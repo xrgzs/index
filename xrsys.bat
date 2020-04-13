@@ -3,7 +3,3 @@ pause
 aria2c.exe "http://rrd.me/gDpkg"
 pause
 program.bat
-pause
-echo del!
-pause
-rmdir /S /Q %dir%
